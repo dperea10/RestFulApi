@@ -2,16 +2,16 @@
   "name": "restfulapi",
   "version": "1.0.0",
   "description": "Creating Rest Api Full whit mongoDB",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon ./index.js"
+    "start": "nodemon ./app.js"
   },
   "keywords": [
     "rest",
     "api"
   ],
-  "author": "Diego",
+  "author": "Diego Perea",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
