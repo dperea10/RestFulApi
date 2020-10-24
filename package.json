@@ -4,8 +4,11 @@
   "description": "Creating Rest Api Full whit mongoDB",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon ./app.js"
+    "start":  "nodemon ./app.js",
+    "client": "cd client && npm run start",
+    "server": "nodemon ./server/index.js",
+    "dev":    "NODE_ENV=development concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
+    "test":   "./node_modules/.bin/mocha --reporter spec"
   },
   "keywords": [
     "rest",
@@ -14,10 +17,12 @@
   "author": "Diego Perea",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "mongoose": "^5.9.13"
   },
   "devDependencies": {
+    "concurrently": "^4.1.0",
     "nodemon": "^2.0.3",
     "bl": ">=2.2.1"
   }
