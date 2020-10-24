@@ -1,13 +1,11 @@
-const express  = require('express');
-
+var express = require('express');
 const app = express();
 const PORT = process.env.PORT || 5000;
 const routes = require('./src/routes/crmRoutes')
 const mongoose = require('mongoose');
 
 mongoose.connect('mongodb://localhost/test', {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
+    useNewUrlParser: true
     
 });
 
